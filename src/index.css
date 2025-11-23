@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-ct-bg text-gray-100;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+}
+
+.glass-card {
+  @apply bg-ct-card/80 border border-white/10 rounded-3xl shadow-2xl shadow-black/50 backdrop-blur-xl;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-4 py-3 rounded-2xl bg-gradient-to-r from-ct-accent to-ct-accent-soft text-black font-semibold tracking-wide hover:opacity-90 transition;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-4 py-3 rounded-2xl border border-ct-accent text-ct-accent font-semibold tracking-wide bg-transparent hover:bg-ct-accent hover:text-white transition;
+}
+
+.input {
+  @apply w-full px-4 py-3 rounded-2xl bg-white/5 border border-white/10 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-ct-accent focus:border-ct-accent;
+}
+
+.chat-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.7) transparent;
+}
+.chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.7);
+  border-radius: 9999px;
+}
+
+@keyframes bounce-slow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.animate-bounce-slow { animation: bounce-slow 3s ease-in-out infinite; }
