@@ -19,7 +19,7 @@ const JoinRoom = () => {
       return;
     }
 
-    const socket = io("http://localhost:5000", { transports: ["websocket"] });
+    const socket = io("https://cryptech-chat-backend.onrender.com", { transports: ["websocket"] });
 
     // Ask backend if room exists
     socket.emit("join-room", { roomCode, username: "checking-if-exists" }, (res) => {

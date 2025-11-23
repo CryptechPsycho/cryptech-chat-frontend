@@ -31,7 +31,7 @@ const CreateRoom = () => {
     setRoomCode(code);
 
     // Connect socket
-    socket = io("http://localhost:5000", {
+    socket = io("https://cryptech-chat-backend.onrender.com", {
       transports: ["websocket"],
     });
 
